@@ -1,0 +1,63 @@
+﻿@model Cliente_Neumaticos.Models.Cliente
+
+@{
+    ViewData["Title"] = "Crear nuevo cliente";
+}
+
+<h1>Crear nuevo cliente</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nombre" class="control-label"></label>
+                <input asp-for="nombre" class="form-control" />
+                <span asp-validation-for="nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RFC" class="control-label"></label>
+                <input asp-for="RFC" class="form-control" />
+                <span asp-validation-for="RFC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_calle" class="control-label"></label>
+                <input asp-for="D_calle" class="form-control" />
+                <span asp-validation-for="D_calle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_numero_hogar" class="control-label"></label>
+                <input asp-for="D_numero_hogar" class="form-control" />
+                <span asp-validation-for="D_numero_hogar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_colonia" class="control-label"></label>
+                <input asp-for="D_colonia" class="form-control" />
+                <span asp-validation-for="D_colonia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="D_estado" class="control-label"></label>
+                <input asp-for="D_estado" class="form-control" />
+                <span asp-validation-for="D_estado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cp" class="control-label"></label>
+                <input asp-for="cp" class="form-control" />
+                <span asp-validation-for="cp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver al inicio</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

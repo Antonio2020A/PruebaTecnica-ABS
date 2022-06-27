@@ -1,0 +1,63 @@
+﻿@model Cliente_Neumaticos.Models.Cliente
+
+@{
+    ViewData["Title"] = "Eliminar cliente";
+}
+
+<h1>Eliminar</h1>
+
+<h3>Usted eliminara lo siguiente</h3>
+<div>
+   
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RFC)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RFC)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.D_calle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.D_calle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.D_numero_hogar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.D_numero_hogar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.D_colonia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.D_colonia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.D_estado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.D_estado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cp)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver al inicio</a>
+    </form>
+</div>
